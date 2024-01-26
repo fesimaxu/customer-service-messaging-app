@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import { IMessagePortal } from "../interface";
 
 const MessagePortalSchema = new Schema<IMessagePortal>(
   {

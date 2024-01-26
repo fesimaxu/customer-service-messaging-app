@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import fs from "fs";
-import parse  from "csv-parser";
 import { sendErrorResponse, sendSuccessResponse } from "../utils/response";
-import MessagePortal from "../model";
+import MessagePortal from "../model/messages";
 
 export const sendMessageController = async (
   req: Request,
@@ -22,6 +20,7 @@ export const sendMessageController = async (
     sendErrorResponse(res, 500, error);
   }
 };
+
 
 
 export const getStoredMessages = async (req: Request, res: Response, next: NextFunction) => {

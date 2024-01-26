@@ -14,11 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getStoredMessages = exports.sendMessageController = void 0;
 const response_1 = require("../utils/response");
-const model_1 = __importDefault(require("../model"));
+const messages_1 = __importDefault(require("../model/messages"));
 const sendMessageController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { user, message } = req.body;
-        const userMessages = yield model_1.default.create({
+        const userMessages = yield messages_1.default.create({
             user,
             message,
         });
@@ -31,7 +31,7 @@ const sendMessageController = (req, res, next) => __awaiter(void 0, void 0, void
 exports.sendMessageController = sendMessageController;
 const getStoredMessages = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const instantMessages = yield model_1.default.find();
+        const instantMessages = yield messages_1.default.find();
         if (!instantMessages) {
             (0, response_1.sendErrorResponse)(res, 404, "No instant message found");
         }
