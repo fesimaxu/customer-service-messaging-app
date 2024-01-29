@@ -1,4 +1,4 @@
-# Customer Service Web APP BACKEND
+# Customer Service Web APP
 
 Backend for the customer service web app.
 
@@ -34,7 +34,7 @@ The project is divided into:
    ```
 2. Install the dependencies:
    ```bash
-   npm install
+    yarn
    ```
 3. Using the `.env.example` template, create a `.env` file and fill in the values for each environment variables:
    ```bash
@@ -107,7 +107,7 @@ Returns JSON.
 Tests can be done with jest and supertest:
 
 ```bash
-npm run test
+yarn run test
 ```
 
 Alternatively, online API testing tools such as Postman can be used to test the endpoints.
