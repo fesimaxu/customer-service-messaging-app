@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { createServer } from "http";
 import logger from "morgan";
 import dotenv from "dotenv";
@@ -31,6 +31,12 @@ app.use(BASE_URL, agentRoutes);
 
 
 app.use(errorHandler);
+
+
+app.use((req: Request, res: Response) => {
+  res.send('Hello, Welcome Customer Service Support!'); 
+  res.end(); 
+})
 
 mongoose
   .connect(`${process.env.DATABASE_URL}`)

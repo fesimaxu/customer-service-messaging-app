@@ -27,6 +27,10 @@ app.use(express_1.default.urlencoded({ extended: false }));
 app.use(endpoints_1.BASE_URL, message_1.default);
 app.use(endpoints_1.BASE_URL, agent_1.default);
 app.use(errorHandler_1.default);
+app.use((req, res) => {
+    res.send('Hello, Welcome Customer Service Support!');
+    res.end();
+});
 mongoose_1.default
     .connect(`${process.env.DATABASE_URL}`)
     .then(() => {
