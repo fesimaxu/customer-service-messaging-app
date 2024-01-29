@@ -1,3 +1,4 @@
 export const generateAgentId = (employmentYear: string) =>{
-"BA" + Math.random() + employmentYear.slice(-2);
+    const randValue = Math.floor(Math.random()*100)
+ return `BA${employmentYear.slice(-2)}0${randValue}`;
 }

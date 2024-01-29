@@ -1,4 +1,5 @@
 import { Server } from "socket.io";
+import { customerServiceChatSocket } from "../messenger";
 
 const socketConfig = async (server: any) => {
   const io = new Server(server, {
@@ -7,6 +8,8 @@ const socketConfig = async (server: any) => {
     },
     pingTimeout: 20000,
   });
+
+  customerServiceChatSocket(io)
 
   io.on("connection", (socket) => {
     console.log("client connected");

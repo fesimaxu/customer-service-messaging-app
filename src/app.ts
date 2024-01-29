@@ -11,6 +11,7 @@ import socketConfig from "./websocket/config";
 import { BASE_URL } from "./utils/endpoints";
 import messagingRoutes from "./routes/message";
 import agentRoutes from "./routes/agent";
+import swaggerDocs from "./utils/swagger";
 
 dotenv.config();
 
@@ -52,10 +53,10 @@ mongoose
     });
 
 
-  app.listen(PORT, ()=>{
+  server.listen(PORT, ()=>{
     console.log(`Server running on port ${PORT}`);
-    //swaggerDocs(app, 8080);
+    swaggerDocs(app, 3050);
   });
 
 
-export default app;
+export default server;

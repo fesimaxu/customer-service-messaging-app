@@ -15,6 +15,7 @@ const config_1 = __importDefault(require("./websocket/config"));
 const endpoints_1 = require("./utils/endpoints");
 const message_1 = __importDefault(require("./routes/message"));
 const agent_1 = __importDefault(require("./routes/agent"));
+const swagger_1 = __importDefault(require("./utils/swagger"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const server = (0, http_1.createServer)(app);
@@ -42,8 +43,8 @@ mongoose_1.default
     .catch((err) => {
     console.log(err);
 });
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    //swaggerDocs(app, 8080);
+    (0, swagger_1.default)(app, 3050);
 });
-exports.default = app;
+exports.default = server;

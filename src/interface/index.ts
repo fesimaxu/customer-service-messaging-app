@@ -1,12 +1,14 @@
+// message interface
 export interface IMessagePortal {
-    user: string;
+    userId: string;
     message: string;
+    timestamp: string
 }
 
-
+// agent interface
 export interface IAgentPortal {
-    agentId: number;
-    name: string;
+    agentId: string;
+    username: string;
     email: string;
     employmentYear: string;
 }
