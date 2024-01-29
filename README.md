@@ -118,11 +118,11 @@ This project uses the MIT License as found in [LICENSE](/LICENSE)
 
 ## 📖 Documentation
 
-Documentation can be found [SWAGGERDOCS](http://localhost:3050/docs)
+Documentation can be found [SWAGGERDOCS](https://customer-service-web-app.onrender.com/docs)
 
 ## 🔗 Links
 
-[Server URL]()
+[Live Base URL](https://customer-service-web-app.onrender.com)
 
 [Database Schema]()
 
