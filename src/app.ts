@@ -6,12 +6,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import { HttpError } from "http-errors";
-import errorHandler from "./middleware/errorHandler";
 import socketConfig from "./websocket/config";
 import { BASE_URL } from "./utils/endpoints";
 import messagingRoutes from "./routes/message";
 import agentRoutes from "./routes/agent";
 import swaggerDocs from "./utils/swagger";
+import errorHandler from "./middleware/errorHandler";
 
 dotenv.config();
 
@@ -31,8 +31,6 @@ app.use(BASE_URL, agentRoutes);
 
 
 app.use(errorHandler);
-
-
 
 mongoose
   .connect(`${process.env.DATABASE_URL}`)
