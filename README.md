@@ -118,7 +118,7 @@ This project uses the MIT License as found in [LICENSE](/LICENSE)
 
 ## 📖 Documentation
 
-Documentation can be found [SWAGGERDOCS](https://customer-service-web-app.onrender.com/docs)
+Documentation can be found [SWAGGERDOCS](https://customer-service-web-app.onrender.com/api/docs)
 
 ## 🔗 Links
 
